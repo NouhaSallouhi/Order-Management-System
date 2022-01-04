@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLLogInController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="515.0" style="-fx-background-color: #333333;">
+         <children>
+            <ImageView fitHeight="577.0" fitWidth="474.0" layoutX="21.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Arrrow%20delevery.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutX="576.0" layoutY="151.0" prefHeight="399.0" prefWidth="358.0" style="-fx-border-color: #333333; -fx-border-radius: 5px;">
+         <children>
+            <Label layoutX="26.0" layoutY="38.0" text="Login:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TF_Login" layoutX="26.0" layoutY="83.0" prefHeight="35.0" prefWidth="299.0" promptText="enter your user name here" />
+            <Label layoutX="26.0" layoutY="153.0" text="Password:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCancel" layoutX="45.0" layoutY="279.0" mnemonicParsing="false" onAction="#cancel" prefHeight="35.0" prefWidth="69.0" style="-fx-background-color: #333333;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnLogin" layoutX="234.0" layoutY="279.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="69.0" style="-fx-background-color: #333333;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="TF_pwd" layoutX="26.0" layoutY="203.0" prefHeight="35.0" prefWidth="299.0" promptText="enter your password here" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLOrderController">
+   <children>
+      <AnchorPane layoutX="-7.0" layoutY="70.0" prefHeight="80.0" prefWidth="1458.0" style="-fx-background-color: #508484;">
+         <children>
+            <Label layoutX="448.0" layoutY="11.0" text="ORDER MANAGEMENT SYSTEM">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-7.0" layoutY="150.0" prefHeight="662.0" prefWidth="277.0" style="-fx-background-color: #333333;">
+         <children>
+            <VBox prefHeight="450.0" prefWidth="277.0" style="-fx-background-color: #edf2f4;">
+               <children>
+                  <JFXButton fx:id="btnToHome" buttonType="RAISED" onAction="#toHome" prefHeight="79.0" prefWidth="277.0" ripplerFill="WHITE" style="-fx-background-color: #333337;" text="Home" textFill="#edf2f4" underline="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnToCostumer1" buttonType="RAISED" onAction="#toCostumer1" prefHeight="125.0" prefWidth="277.0" ripplerFill="WHITE" style="-fx-background-color: #333333;" text="CUSTOMERS" textFill="#edf2f4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnToProduct" buttonType="RAISED" onAction="#toProduct" prefHeight="125.0" prefWidth="277.0" ripplerFill="WHITE" style="-fx-background-color: #333333;" text="PRODUCTS" textFill="#edf2f4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnToOrder1" buttonType="RAISED" onAction="#toOrder1" prefHeight="125.0" prefWidth="277.0" ripplerFill="WHITE" style="-fx-background-color: #333333;" text="ORDERS" textFill="#508484">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="631.0" layoutY="150.0" prefHeight="47.0" prefWidth="462.0" style="-fx-background-color: #333333; -fx-border-radius: 5px;">
+         <children>
+            <Label layoutX="187.0" layoutY="4.0" prefHeight="39.0" prefWidth="97.0" text="Orders  " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="270.0" layoutY="221.0" prefHeight="303.0" prefWidth="1177.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Sales Report">
+               <content>
+                  <TableView fx:id="TVOrder" prefHeight="200.0" prefWidth="1030.0">
+                    <columns>
+                        <TableColumn fx:id="col_orderId" prefWidth="105.0" text="order id " />
+                        <TableColumn fx:id="col_costumerId" prefWidth="125.0" text="costumer id" />
+                      <TableColumn fx:id="col_prodID" prefWidth="130.0" text="product id " />
+                      <TableColumn fx:id="col_quantityO" minWidth="5.0" prefWidth="140.0" text="quantity ordered" />
+                        <TableColumn fx:id="col_price" prefWidth="140.0" text="product price" />
+                        <TableColumn fx:id="col_prodName" prefWidth="141.0" text="product name" />
+                        <TableColumn fx:id="col_brand" prefWidth="129.0" text="brand" />
+                        <TableColumn fx:id="col_employee" prefWidth="146.0" text="employee name" />
+                        <TableColumn fx:id="col_soldBy" prefWidth="121.0" text="sold by" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+          <Tab text="Order detail">
+               <content>
+                  <TableView fx:id="TVOrderDetail" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="col_orderID" prefWidth="115.0" text="order id " />
+                      <TableColumn fx:id="col_cusID" prefWidth="138.0" text="customer id " />
+                        <TableColumn fx:id="col_soldb" prefWidth="185.0" text="sold by " />
+                        <TableColumn fx:id="col_cost" prefWidth="167.0" text="total cost" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
